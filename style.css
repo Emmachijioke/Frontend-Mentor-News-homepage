@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Inter', sans-serif; 
+    src: url(Inter-Bold.ttf);
+    src: url(Inter-ExtraBold.ttf);
+    src: url(Inter-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body: hsl(36, 100%, 99%);
+    --orange: hsl(35, 77%, 62%);
+    --button: hsl(5, 85%, 63%);
+    --content: hsl(240, 100%, 5%);
+    --card-text: hsl(236, 13%, 42%);
+    --text: hsl(233, 8%, 79%);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: var(--content);
+    background-color: var(--body);
+    font-size: 15px;
+    line-height: 1.7
+}
+
+.header{
+    max-width: 1440px;
+    margin: 0 9rem;
+}
+
+.image1{
+    grid-column: 1 / 3;
+}
+
+.grid-container{
+    max-width: 1440px;
+    justify-content: center;
+    margin: auto;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300 150 100);
+    grid-template-areas: 
+    "image image content"
+    "header paragraph content"
+    "card1 card2 card3";
+    gap: 20px;
+}
+
+.image-box{
+    grid-area: image;
+}
+
+.content{
+    grid-area: content;
+}
+
+.heading{
+    grid-area: header;
+}
+
+.description{
+    grid-area: paragraph;
+}
+
+
+.image1{
+    max-width: 100%;
+}
+
+.image7{
+    max-width: 100%;
+    display: none;
+}
+.article1{
+    grid-area: card1;
+}
+.article2{
+    grid-area: card2;
+}
+.article3{
+    grid-area: card3;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.button{
+    width: 12rem;
+    letter-spacing: 5px;
+    color: white;
+    background-color: var(--button);
+    height: 3rem;
+    font-weight: 800;
+    border: var(--button);
+}
+
+.content{
+    background-color: var(--content);
+    color: white;
+    padding: 35px;
+}
+
+.head{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.content h5{
+    font-weight: 700;
+}
+
+.main-text{
+    opacity: 50%;
+}
+
+.content p{
+    opacity: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.div{
+    border: 1px solid gray;
+    opacity: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.pix{
+    width: 60%;
+    height: 8.5rem;
+}
+.pix2{
+    width: 60%;
+    height: 8.5rem;
+}
+
+.article1{
+    display: flex;
+    margin: 1.5rem 0;
+}
+.article2{
+    display: flex;
+    margin: 1.5rem 0;
+}
+.article3{
+    display: flex;
+    margin: 1.5rem 0;
+}
+
+.card-quote h2{
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+
+.card-quote h6{
+    font-weight: 700;
+}
+
+.card-quote{
+    align-items: flex-end;
+    line-height: 1;
+    margin-left: 1.5rem;
+}
+
+.article3 p{
+    opacity: 50%;
+    line-height: 1.5;
+}
+.article2 p{
+    opacity: 50%;
+    line-height: 1.5;
+}
+.article1 p{
+    opacity: 50%;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .image7{ 
+        display: block;
+        width: 100vw;
+    }
+    
+    .image-box{
+        width: 100%;
+    }
+
+    .image1{
+        display: none;
+    }
+
+    .grid-container{
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "header"
+        "paragraph"
+        "content"
+        "card1"
+        "card2"
+        "card3";
+    }
+    .pix{
+        width: 60%;
+        height: 9rem;
+    }
+    .pix2{
+        width: 50%;
+        height: 9rem;
+    }
+    .heading{
+        margin-bottom: -0.5rem;
+    }
+    .description{
+        margin-bottom: 2.7rem;
+    }
+    .content{
+        margin-bottom: 2rem;
+        padding: 20px;
+    }
+    .article1{
+        margin-bottom: -0.5rem;
+    }
+    .article2{
+        margin-bottom: -0.5rem;
+    }
+   .article1 p{
+    line-height: 2;
+   }
+   .article2 p{
+    line-height: 2;
+   }
+   .article3 p{
+    line-height: 2;
+   }
+}
